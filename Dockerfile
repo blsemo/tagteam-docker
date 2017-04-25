@@ -29,5 +29,5 @@ RUN /bin/bash -l -c ". ~/.rvm/scripts/rvm && rvm use 2.3.3@tagteam && bundle"
 # copy config files ready to be modified
 RUN cp config/sunspot.yml.example config/sunspot.yml && cp config/database.yml.example config/database.yml && cp config/tagteam.yml.example config/tagteam.yml 
 # fix database config :-(
-RUN sed -i -e '13i  template: template0' -e '39i  template: template0' -e '46i  template: template0' config/database.yml
+RUN sed -i -e '13i\ \ template: template0' -e '39i\ \ template: template0' -e '46i\ \ template: template0' config/database.yml
 
